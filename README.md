@@ -5,7 +5,7 @@
 [![Python 3.11.6](https://img.shields.io/badge/python-3.11.6-blue.svg)](https://www.python.org/downloads/release/python-3116/)
 [![Git 2.39.1](https://img.shields.io/badge/git-2.39.1-red.svg)](https://git-scm.com/docs/git/2.39.0)
 
-Fire detection with YOLOv8 is an amazing project aimed at utilizing the powerful YOLOv8 object detection algorithm to detect fires in images or videos. Our repository provides a implementation of fire detection using YOLOv8, including training scripts, pre-trained models, and inference tools.
+Digit recognition with YOLOv8 is an exceptional project designed to leverage the robust YOLOv8 object detection algorithm for recognizing digits in images or videos. Our repository offers an implementation of digit recognition using YOLOv8, comprising training scripts, pre-trained models, and inference tools.Als
 
 
 # Digit Recognition
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ## Testing On Real-Time Webcam
 Run this code at git bash or cmd:
 ``` shell
-python yolov8_live_test.py
+python yolo_live_test.py
 ```
 
 
@@ -44,18 +44,18 @@ Run this code at git bash or cmd and change `/path/image` according your files. 
 
 
 ``` shell
-python yolov8s_image_test.py /path/image.jpg --resize_width 400 --resize_height 300
+python yolo_image_test.py /path/image.jpg --resize_width 400 --resize_height 300
 ```
 
 
-![Resim Açıklaması](assets/fire_p.jpg)
+![Resim Açıklaması](assets/images/num_detected.jpg)
 
 
 ## Testing on a Video
 Run this code at git bash or cmd and change `/path/image` according your files. Using `--resize_width 400` and `--resize_height 400` the size of output of the video can change:
 
 ``` shell
-python yolov8s_video_test.py /path/video.mp4 --resize_width 1280 --resize_height 720
+python yolo_video_test.py /path/video.mp4 --resize_width 1280 --resize_height 720
 ```
 
 
@@ -64,7 +64,7 @@ python yolov8s_video_test.py /path/video.mp4 --resize_width 1280 --resize_height
 <br>
 <div class="gif">
 <p align="center">
-<img src='assets/gif.gif' align="center" width=800>
+<img src='assets/videos/git_video.gif' align="center" width=800>
 </p>
 </div>
 </div>
@@ -72,23 +72,28 @@ python yolov8s_video_test.py /path/video.mp4 --resize_width 1280 --resize_height
 
 
 ## Results
--This results produced after 50 epochs with yolov8s model and [Fire-Dataset](https://www.kaggle.com/datasets/dataclusterlabs/fire-and-smoke-dataset).
+-This results produced after 50 epochs with yolov8s model and [Digit-Dataset](https://universe.roboflow.com/sambhavs-vision/number-extraction).
 
 
 | F1 Curve | P Curve | PR Curve |
 | :-: | :-: | :-: |
-| ![](results/yolov8/F1_curve.png) | ![](results/yolov8/P_curve.png) | ![](results/yolov8/PR_curve.png) |
+| ![](results/F1_curve.png) | ![](results/P_curve.png) | ![](results/PR_curve.png) |
 
 | Confusion Matrix | R Curve | results |
 | :-: | :-: | :-: |
-| ![](results/yolov8/confusion_matrix.png) | ![](results/yolov8/R_curve.png) | ![](results/yolov8/results.png) |
+| ![](results/conf_matrix.png) | ![](results/labels.jpg) | ![](results/results.png) |
 
 
 ### Predictions
 
 | label | Prediction | 
 | :-: | :-: |
-| ![](results/yolov8/val_batch0_labels.jpg) | ![](results/yolov8/val_batch0_pred.jpg) |
+| ![](results/val_batch0_label.jpg) | ![](results/val_batch0_preds.jpg) |
+
+
+| label | Prediction | 
+| :-: | :-: |
+| ![](results/val_batch_label1.jpg) | ![](results/val_batch_preds1.jpg) |
 
 
 
@@ -98,23 +103,23 @@ python yolov8s_video_test.py /path/video.mp4 --resize_width 1280 --resize_height
 ### Usage
 
 ``` shell
-streamlit run main.py
+streamlit run yolov8_main.py
 ```
 
 
 ### Image Testing
 
+![Resim Açıklaması](assets/images/test_img.jpg)
 
 
-![Resim Açıklaması](assets/streamlit_predict_image.png)
+### My model Testing on mnist dataset
 
-### Youtube Video Testing
+| test1 | test2 | 
+| :-: | :-: |
+| ![](assets/images/my_model_test1.jpg) | ![](assets/images/my_model_test2.jpg) |
 
-![Resim Açıklaması](assets/streamlit_predict_youtube.png)
 
 ## References
 https://roboflow.com/
 
 https://github.com/ultralytics/ultralytics
-
-https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/tree/master
