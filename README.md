@@ -112,7 +112,13 @@ streamlit run yolov8_main.py
 ![Resim Açıklaması](assets/images/test_img.jpg)
 
 
-### My model Testing on mnist dataset
+### My model Training on mnist dataset
+-In this part I tried to test images with my model.
+
+![Resim Açıklaması](results/my_model_sum.jpg)
+
+![Resim Açıklaması](results/my_model_score.jpg)
+
 
 | test1 | test2 | 
 | :-: | :-: |
